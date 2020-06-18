@@ -35,7 +35,7 @@
         <org.springframework.springloaded.version>1.2.5.RELEASE</org.springframework.springloaded.version>
         <org.springframework.spring-context-support.version>4.2.7.RELEASE</org.springframework.spring-context-support.version>
         <commons-lang3.version>3.8</commons-lang3.version>
-        <commons.beanutils.version>1.7.0</commons.beanutils.version>
+        <commons.beanutils.version>1.9.4</commons.beanutils.version>
         <elasticjob.version>2.1.5</elasticjob.version>
     </properties>
 
