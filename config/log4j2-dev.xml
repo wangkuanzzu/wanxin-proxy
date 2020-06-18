@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="600">
+
+    <Properties>
+<!--        <Property name="logPath">/apps/logs/base-service</Property>-->
+        <Property name="logPath">/Users/kuan/temp/apps/logs/base-service</Property>
+    </Properties>
+
+    <Appenders>
+
+        <Console name="console_all_appender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{1.} - %msg%n" />
+        </Console>
+
+        <RollingFile name="all_appender" filename="${logPath}/wanxin-anbo-proxy.log"
+                     filepattern="${logPath}/backup/base-service.log.%i">
+            <PatternLayout
+                    pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}][%p][%X{sessionId}][%X{cip}:%X{cPort}][%X{sip}:%X{sPort}][][%X{userId}][%t][%logger{1.}|%M|%L] - %msg%n" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="512 MB"/>
+            </Policies>
+            <!-- !!!important!!! %i must in filepattern -->
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+    </Appenders>
+
+	<Loggers>
+        <root level="Debug">
+            <appender-ref ref="console_all_appender" />
+            <appender-ref ref="all_appender" />
+        </root>
+
+        <logger name="com.qb.ad.base.rest" level="Info" />
+        <logger name="com.qb.ad.base.service" level="Info" />
+
+        <!-- 第三方日志系统 -->
+        <logger name="org.springframework.core" level="info" />
+        <logger name="org.springframework.beans" level="info" />
+        <logger name="org.springframework.context" level="info" />
+        <logger name="org.springframework.web" level="info" />
+        <logger name="org.springframework.security" level="info" />
+        <logger name="io.swagger" level="error" />
+
+	</Loggers>
+</Configuration>
