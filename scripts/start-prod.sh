@@ -11,4 +11,4 @@ echo "内存参数: "$MEM_OPTS
 nohup java $MEM_OPTS -jar lib/wanxin-anbo-proxy-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod > /dev/null 2>&1 &
 pid=$!
 echo $pid>.pid
-echo "ad-web 启动成功"
+echo "wanxin-anbo-proxy 启动成功"

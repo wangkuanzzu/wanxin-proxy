@@ -12,4 +12,4 @@ if [ ! -d logs ]; then  mkdir logs  ; fi
 java $MEM_OPTS -Dlogging.config=file:config/log4j2.xml -jar lib/wanxin-anbo-proxy-1.0.0-SNAPSHOT.jar >> logs/start.out 2>&1 &
 pid=$!
 echo $pid>.pid
-echo "ad-web 启动成功"
+echo "wanxin-anbo-proxy 启动成功"

@@ -1,3 +1,3 @@
 #!/bin/bash
 kill `cat .pid`
-echo 'ad-web 停止成功'
+echo 'wanxin-anbo-proxy 停止成功'

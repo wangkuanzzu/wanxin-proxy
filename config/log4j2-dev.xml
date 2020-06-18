@@ -2,8 +2,7 @@
 <Configuration status="WARN" monitorInterval="600">
 
     <Properties>
-<!--        <Property name="logPath">/apps/logs/base-service</Property>-->
-        <Property name="logPath">/Users/kuan/temp/apps/logs/base-service</Property>
+        <Property name="logPath">/apps/logs/wanxin-anbo-proxy</Property>
     </Properties>
 
     <Appenders>
