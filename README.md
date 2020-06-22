@@ -6,7 +6,7 @@
     根据广告位ID，获取广告信息，返回广告内容content和点击redirectUrl
     
 ### 2.业务规划
-    [GET] https://wanxinproxy.anbokeji.net/wanxin/ad
+    [POST] https://wanxinproxy.anbokeji.net/wanxin/ad
     
 ### 3.请求参数
 | **参数**           | **名称** | **类型** | **长度** | **约束** | **说明** |
